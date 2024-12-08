@@ -1,0 +1,14 @@
+{
+  "name": "@lehungio/typescript",
+  "version": "1.0.0-rc.0",
+  "description": "Typescript Challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Typescript"
+  ],
+  "author": "me@lehungio.com",
+  "license": "GPL-3.0"
+}
