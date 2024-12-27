@@ -17,3 +17,9 @@ console.log(resistorColorDuoDecoder(['brown', 'black'])); // 10
 // https://github.com/lehungio/typescript/issues/5
 import { resistorColorTrioDecoder } from './modules/challenges/resistor-color-trio';
 console.log(resistorColorTrioDecoder(['brown', 'black', 'red'])); // 1 kiloohms
+
+// https://github.com/lehungio/typescript/issues/6
+import { isLeap } from './modules/challenges/leap';
+console.log(isLeap(1996)); // true
+console.log(isLeap(2024)); // true
+console.log(isLeap(2025)); // false
