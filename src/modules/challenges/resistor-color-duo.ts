@@ -13,6 +13,6 @@ const resitorColor = [
 
 export type Color = typeof resitorColor[number];
 
-export function resistorColorDecoder([band1, band2]: Color[]): number {
+export function resistorColorDuoDecoder([band1, band2]: Color[]): number {
   return resitorColor.indexOf(band1) * 10 + resitorColor.indexOf(band2);
 }

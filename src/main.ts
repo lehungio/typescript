@@ -11,5 +11,9 @@ import { colorCode } from './modules/challenges/resistor-color';
 console.log(colorCode('black'));
 
 // https://github.com/lehungio/typescript/issues/4
-import { resistorColorDecoder } from './modules/challenges/resistor-color-duo';
-console.log(resistorColorDecoder(['brown', 'black'])); // 10
+import { resistorColorDuoDecoder } from './modules/challenges/resistor-color-duo';
+console.log(resistorColorDuoDecoder(['brown', 'black'])); // 10
+
+// https://github.com/lehungio/typescript/issues/5
+import { resistorColorTrioDecoder } from './modules/challenges/resistor-color-trio';
+console.log(resistorColorTrioDecoder(['brown', 'black', 'red'])); // 1 kiloohms
