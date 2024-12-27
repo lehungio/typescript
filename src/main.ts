@@ -9,3 +9,7 @@ console.log(twoFer('LehungIO'));
 // https://github.com/lehungio/typescript/issues/3
 import { colorCode } from './modules/challenges/resistor-color';
 console.log(colorCode('black'));
+
+// https://github.com/lehungio/typescript/issues/4
+import { resistorColorDecoder } from './modules/challenges/resistor-color-duo';
+console.log(resistorColorDecoder(['brown', 'black'])); // 10
