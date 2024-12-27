@@ -36,3 +36,9 @@ console.log(`Challenge 6 - Leap Year: isLeap(${isLeapInput3}) => ${isLeap(isLeap
 import { toRna } from './modules/challenges/rna-transcription';
 const toRnaInput = 'ACGTGGTCTTAA';
 console.log(`Challenge 7 - RNA Transcription: toRna('${toRnaInput}') => ${toRna(toRnaInput)}`);
+
+// https://github.com/lehungio/typescript/issues/8
+import { age } from './modules/challenges/space-age';
+const ageInput1 = 'earth';
+const ageInput2 = 1000000000;
+console.log(`Challenge 8 - Space Age: age('${ageInput1}', ${ageInput2}) => ${age(ageInput1, ageInput2)}`);
