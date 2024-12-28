@@ -42,3 +42,8 @@ import { age } from './modules/challenges/space-age';
 const ageInput1 = 'earth';
 const ageInput2 = 1000000000;
 console.log(`Challenge 8 - Space Age: age('${ageInput1}', ${ageInput2}) => ${age(ageInput1, ageInput2)}`);
+
+// https://github.com/lehungio/typescript/issues/9
+import { DnDCharacter } from './modules/challenges/dnd-character';
+const dndCharacter = new DnDCharacter();
+console.log(`Challenge 9 - Dungeons & Dragons Character: ${JSON.stringify(dndCharacter)}`);
