@@ -65,3 +65,10 @@ const heyInput = 'WATCH OUT!';
 const coolInput = 'Cool Bean!';
 console.log(`Challenge 12 - Bob: hey('${heyInput}') => ${hey(heyInput)}`);
 console.log(`Challenge 12 - Bob: hey('${coolInput}') => ${hey(coolInput)}`);
+
+// https://github.com/lehungio/typescript/issues/13
+import { Matrix } from './modules/challenges/matrix';
+const matrixInput = '1 2 3\n4 5 6\n7 8 9';  // 3x3 matrix
+const matrix = new Matrix(matrixInput);
+console.log(`Challenge 13 - Matrix: matrix.rows => ${JSON.stringify(matrix.rows)}`);
+console.log(`Challenge 13 - Matrix: matrix.columns => ${JSON.stringify(matrix.columns)}`);
