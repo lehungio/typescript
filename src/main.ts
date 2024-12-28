@@ -119,3 +119,10 @@ console.log(`Challenge 15 - Grade School: school.roster() => ${JSON.stringify(sc
 console.log(`Challenge 15 - Grade School: school.grade(100) => ${JSON.stringify(school.grade(100))}`);
 console.log(`Challenge 15 - Grade School: school.grade(10) => ${JSON.stringify(school.grade(10))}`);
 console.log(`Challenge 15 - Grade School: school.grade(50) => ${JSON.stringify(school.grade(50))}`);
+
+// https://github.com/lehungio/typescript/issues/16
+import { Clock } from './modules/challenges/clock';
+let clock = new Clock(8, 0);
+console.log(`Challenge 16 - Clock: clock.toString() => ${clock.toString()}`);
+console.log(`Challenge 16 - Clock: clock.plus(245).toString() => ${clock.plus(245).toString()}`);
+console.log(`Challenge 16 - Clock: clock.minus(15).toString() => ${clock.minus(15).toString()}`);
