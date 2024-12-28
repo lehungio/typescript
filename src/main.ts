@@ -126,3 +126,20 @@ let clock = new Clock(8, 0);
 console.log(`Challenge 16 - Clock: clock.toString() => ${clock.toString()}`);
 console.log(`Challenge 16 - Clock: clock.plus(245).toString() => ${clock.plus(245).toString()}`);
 console.log(`Challenge 16 - Clock: clock.minus(15).toString() => ${clock.minus(15).toString()}`);
+
+// https://github.com/lehungio/typescript/issues/17
+import { SecretHandshake } from './modules/challenges/secret-handshake';
+const secretHandshake = new SecretHandshake(8);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake.commands() => ${JSON.stringify(secretHandshake.commands())}`);
+const secretHandshake2 = new SecretHandshake(4);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake2.commands() => ${JSON.stringify(secretHandshake2.commands())}`);
+const secretHandshake3 = new SecretHandshake(2);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake3.commands() => ${JSON.stringify(secretHandshake3.commands())}`);
+const secretHandshake4 = new SecretHandshake(1);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake4.commands() => ${JSON.stringify(secretHandshake4.commands())}`);
+const secretHandshake5 = new SecretHandshake(16);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake5.commands() => ${JSON.stringify(secretHandshake5.commands())}`);
+const secretHandshake6 = new SecretHandshake(17);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake6.commands() => ${JSON.stringify(secretHandshake6.commands())}`);
+const secretHandshake7 = new SecretHandshake(32);
+console.log(`Challenge 17 - Secret Handshake: secretHandshake7.commands() => ${JSON.stringify(secretHandshake7.commands())}`);
