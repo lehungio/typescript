@@ -143,3 +143,11 @@ const secretHandshake6 = new SecretHandshake(17);
 console.log(`Challenge 17 - Secret Handshake: secretHandshake6.commands() => ${JSON.stringify(secretHandshake6.commands())}`);
 const secretHandshake7 = new SecretHandshake(32);
 console.log(`Challenge 17 - Secret Handshake: secretHandshake7.commands() => ${JSON.stringify(secretHandshake7.commands())}`);
+
+// https://github.com/lehungio/typescript/issues/18
+import { find } from './modules/challenges/binary-search';
+const findInput = [1, 3, 4, 6, 8, 9, 11];
+const findTarget = 6;
+console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, ${findTarget}) => Index: ${find(findInput, findTarget)}`);
+console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, 11) => Index: ${find(findInput, 11)}`);
+console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, 9) => Index: ${find(findInput, 9)}`);
