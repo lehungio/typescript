@@ -184,3 +184,22 @@ console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shif
 console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
 console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
 
+// https://github.com/lehungio/typescript/issues/20
+import { Rational } from './modules/challenges/rational-numbers';
+const rational1 = new Rational(1, 2);
+const rational2 = new Rational(1, 1);
+const rational3 = new Rational(1, 3);
+const rational4 = new Rational(1, 4);
+console.log(`Challenge 20 - Rational Numbers: rational1.toString() => ${rational1.toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational2.toString() => ${rational2.toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational3.toString() => ${rational3.toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational4.toString() => ${rational4.toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational1.add(rational2).toString() => ${rational1.add(rational2).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational1.sub(rational2).toString() => ${rational1.sub(rational2).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational1.mul(rational2).toString() => ${rational1.mul(rational2).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational1.div(rational2).toString() => ${rational1.div(rational2).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational3.div(rational4).toString() => ${rational3.div(rational4).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational3.mul(rational4).toString() => ${rational3.mul(rational4).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational3.add(rational4).toString() => ${rational3.add(rational4).toString()}`);
+console.log(`Challenge 20 - Rational Numbers: rational3.sub(rational4).toString() => ${rational3.sub(rational4).toString()}`);
+
