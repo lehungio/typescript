@@ -53,3 +53,9 @@ import { score } from './modules/challenges/darts';
 const scoreInput1 = 0;
 const scoreInput2 = 1;
 console.log(`Challenge 10 - Darts: score(${scoreInput1}, ${scoreInput2}) => ${score(scoreInput1, scoreInput2)} (Bulls-eye: distance <= 1)`);
+
+// https://github.com/lehungio/typescript/issues/11
+import { isPangram } from './modules/challenges/pangram';
+const isPangramInput = 'the quick brown fox jumps over the lazy dog';
+console.log(`Challenge 11 - Pangram: isPangram('${isPangramInput}') => ${isPangram(isPangramInput)}`);
+
