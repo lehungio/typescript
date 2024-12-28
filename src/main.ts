@@ -102,3 +102,20 @@ const robot7 = new Robot2();
 console.log(`Challenge 14 - Robot Name: robot7.name => ${robot7.name}`);
 const robot8 = new Robot2();
 console.log(`Challenge 14 - Robot Name: robot8.name => ${robot8.name}`);
+
+// https://github.com/lehungio/typescript/issues/15
+import { GradeSchool } from './modules/challenges/grade-school';
+let school = new GradeSchool();
+console.log(`Challenge 15 - Grade School: school.roster() => ${JSON.stringify(school.roster())}`);
+school.add('Anime', 2);
+console.log(`Challenge 15 - Grade School: school.roster() => ${JSON.stringify(school.roster())}`);
+school.add('Doraemon', 10);
+school.add('Nobita', 100);
+school.add('Dragon Ball', 2);
+console.log(`Challenge 15 - Grade School: school.roster() => ${JSON.stringify(school.roster())}`);
+school.add('Chelsea', 3);
+school.add('Songoku', 50);
+console.log(`Challenge 15 - Grade School: school.roster() => ${JSON.stringify(school.roster())}`);
+console.log(`Challenge 15 - Grade School: school.grade(100) => ${JSON.stringify(school.grade(100))}`);
+console.log(`Challenge 15 - Grade School: school.grade(10) => ${JSON.stringify(school.grade(10))}`);
+console.log(`Challenge 15 - Grade School: school.grade(50) => ${JSON.stringify(school.grade(50))}`);
