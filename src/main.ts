@@ -47,3 +47,9 @@ console.log(`Challenge 8 - Space Age: age('${ageInput1}', ${ageInput2}) => ${age
 import { DnDCharacter } from './modules/challenges/dnd-character';
 const dndCharacter = new DnDCharacter();
 console.log(`Challenge 9 - Dungeons & Dragons Character: ${JSON.stringify(dndCharacter)}`);
+
+// https://github.com/lehungio/typescript/issues/10
+import { score } from './modules/challenges/darts';
+const scoreInput1 = 0;
+const scoreInput2 = 1;
+console.log(`Challenge 10 - Darts: score(${scoreInput1}, ${scoreInput2}) => ${score(scoreInput1, scoreInput2)} (Bulls-eye: distance <= 1)`);
