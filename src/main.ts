@@ -72,3 +72,33 @@ const matrixInput = '1 2 3\n4 5 6\n7 8 9';  // 3x3 matrix
 const matrix = new Matrix(matrixInput);
 console.log(`Challenge 13 - Matrix: matrix.rows => ${JSON.stringify(matrix.rows)}`);
 console.log(`Challenge 13 - Matrix: matrix.columns => ${JSON.stringify(matrix.columns)}`);
+
+// https://github.com/lehungio/typescript/issues/14
+import { Robot } from './modules/challenges/robot-name';
+const robot1 = new Robot();
+const robot2 = new Robot();
+console.log(`Challenge 14 - Robot Name: robot1.name => ${robot1.name}`);
+console.log(`Challenge 14 - Robot Name: robot2.name => ${robot2.name}`);
+robot1.resetName();
+console.log(`Challenge 14 - Robot Name: robot1.name => ${robot1.name}`);
+console.log(`Challenge 14 - Robot Name: robot2.name => ${robot2.name}`);
+Robot.releaseNames();
+const robot3 = new Robot();
+console.log(`Challenge 14 - Robot Name: robot3.name => ${robot3.name}`);
+const robot4 = new Robot();
+console.log(`Challenge 14 - Robot Name: robot4.name => ${robot4.name}`);
+
+// https://github.com/lehungio/typescript/issues/14
+import { Robot as Robot2 } from './modules/challenges/robot-name';
+const robot5 = new Robot2();
+const robot6 = new Robot2();
+console.log(`Challenge 14 - Robot Name: robot5.name => ${robot5.name}`);
+console.log(`Challenge 14 - Robot Name: robot6.name => ${robot6.name}`);
+robot5.resetName();
+console.log(`Challenge 14 - Robot Name: robot5.name => ${robot5.name}`);
+console.log(`Challenge 14 - Robot Name: robot6.name => ${robot6.name}`);
+Robot2.releaseNames();
+const robot7 = new Robot2();
+console.log(`Challenge 14 - Robot Name: robot7.name => ${robot7.name}`);
+const robot8 = new Robot2();
+console.log(`Challenge 14 - Robot Name: robot8.name => ${robot8.name}`);
