@@ -59,3 +59,9 @@ import { isPangram } from './modules/challenges/pangram';
 const isPangramInput = 'the quick brown fox jumps over the lazy dog';
 console.log(`Challenge 11 - Pangram: isPangram('${isPangramInput}') => ${isPangram(isPangramInput)}`);
 
+// https://github.com/lehungio/typescript/issues/12
+import { hey } from './modules/challenges/bob';
+const heyInput = 'WATCH OUT!';
+const coolInput = 'Cool Bean!';
+console.log(`Challenge 12 - Bob: hey('${heyInput}') => ${hey(heyInput)}`);
+console.log(`Challenge 12 - Bob: hey('${coolInput}') => ${hey(coolInput)}`);
