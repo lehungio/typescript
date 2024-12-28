@@ -151,3 +151,36 @@ const findTarget = 6;
 console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, ${findTarget}) => Index: ${find(findInput, findTarget)}`);
 console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, 11) => Index: ${find(findInput, 11)}`);
 console.log(`Challenge 18 - Binary Search: find(${JSON.stringify(findInput)}, 9) => Index: ${find(findInput, 9)}`);
+
+// https://github.com/lehungio/typescript/issues/19
+import { LinkedList } from './modules/challenges/linked-list';
+const linkedList = new LinkedList<number>();
+linkedList.push(10);
+linkedList.push(20);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+linkedList.push(30);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+linkedList.push(40);
+linkedList.push(50);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
+linkedList.push(60);
+console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.pop() => ${linkedList.pop()}`);
+console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
+linkedList.push(70);
+linkedList.push(80);
+console.log(`Challenge 19 - Linked List: linkedList.unshift(90) => ${linkedList.unshift(90)}`);
+console.log(`Challenge 19 - Linked List: linkedList.unshift(100) => ${linkedList.unshift(100)}`);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
+console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
+
