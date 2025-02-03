@@ -184,6 +184,9 @@ console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shif
 console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
 console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
 
+// Rational Rascals
+// Rational numbers are numbers that can be expressed as the quotient of two integers
+// Goal: Create a class that can perform basic arithmetic operations on rational numbers
 // https://github.com/lehungio/typescript/issues/20
 import { Rational } from './modules/challenges/rational-numbers';
 const rational1 = new Rational(1, 2);
@@ -203,3 +206,12 @@ console.log(`Challenge 20 - Rational Numbers: rational3.mul(rational4).toString(
 console.log(`Challenge 20 - Rational Numbers: rational3.add(rational4).toString() => ${rational3.add(rational4).toString()}`);
 console.log(`Challenge 20 - Rational Numbers: rational3.sub(rational4).toString() => ${rational3.sub(rational4).toString()}`);
 
+// Atbash Cipher Chronicles: Secrets of the Backwards Alphabet
+// https://github.com/lehungio/typescript/issues/21
+import { encode, decode } from './modules/challenges/atbash-cipher';
+const encodeInput = 'Testing,1 2 3, testing.';
+console.log(`Challenge 21 - Atbash Cipher: encode('${encodeInput}') => ${encode(encodeInput)}`);
+const decodeInput = 'gvhgr mt123 gvhgr mt';
+console.log(`Challenge 21 - Atbash Cipher: decode('${decodeInput}') => ${decode(decodeInput)}`);
+const encodeInput01 = 'lehungio';
+console.log(`Challenge 21 - Atbash Cipher: encode('${encodeInput01}') => ${encode(encodeInput01)}`);

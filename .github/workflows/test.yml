@@ -2,7 +2,7 @@ name: Test Challenges
 
 on:
   push:
-    branches: ["main", "challenge*", "test*"]
+    branches: ["main", "test*"]
   pull_request:
     branches: ["main"]
 
@@ -26,5 +26,7 @@ jobs:
     - run: npm run build --if-present
     - name: Install dependencies
       run: npm install
+    - name: Run main
+      run: npm run main
     - name: Run tests
       run: npm test
