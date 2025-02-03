@@ -184,6 +184,9 @@ console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shif
 console.log(`Challenge 19 - Linked List: linkedList.shift() => ${linkedList.shift()}`);
 console.log(`Challenge 19 - Linked List: linkedList.count() => ${linkedList.count()}`);
 
+// Rational Rascals
+// Rational numbers are numbers that can be expressed as the quotient of two integers
+// Goal: Create a class that can perform basic arithmetic operations on rational numbers
 // https://github.com/lehungio/typescript/issues/20
 import { Rational } from './modules/challenges/rational-numbers';
 const rational1 = new Rational(1, 2);
