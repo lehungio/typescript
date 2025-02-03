@@ -203,3 +203,12 @@ console.log(`Challenge 20 - Rational Numbers: rational3.mul(rational4).toString(
 console.log(`Challenge 20 - Rational Numbers: rational3.add(rational4).toString() => ${rational3.add(rational4).toString()}`);
 console.log(`Challenge 20 - Rational Numbers: rational3.sub(rational4).toString() => ${rational3.sub(rational4).toString()}`);
 
+// Atbash Cipher Chronicles: Secrets of the Backwards Alphabet
+// https://github.com/lehungio/typescript/issues/21
+import { encode, decode } from './modules/challenges/atbash-cipher';
+const encodeInput = 'Testing,1 2 3, testing.';
+console.log(`Challenge 21 - Atbash Cipher: encode('${encodeInput}') => ${encode(encodeInput)}`);
+const decodeInput = 'gvhgr mt123 gvhgr mt';
+console.log(`Challenge 21 - Atbash Cipher: decode('${decodeInput}') => ${decode(decodeInput)}`);
+const encodeInput01 = 'lehungio';
+console.log(`Challenge 21 - Atbash Cipher: encode('${encodeInput01}') => ${encode(encodeInput01)}`);
