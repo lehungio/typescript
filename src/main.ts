@@ -215,3 +215,21 @@ const decodeInput = 'gvhgr mt123 gvhgr mt';
 console.log(`Challenge 21 - Atbash Cipher: decode('${decodeInput}') => ${decode(decodeInput)}`);
 const encodeInput01 = 'lehungio';
 console.log(`Challenge 21 - Atbash Cipher: encode('${encodeInput01}') => ${encode(encodeInput01)}`);
+
+// Simple Cipher Chronicles: Secrets of the Shift
+// https://github.com/lehungio/typescript/issues/22
+import { SimpleCipher } from './modules/challenges/simple-cipher';
+const simpleCipher = new SimpleCipher();
+const encodeInput02 = 'iamapandabear';
+console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput02}') => ${simpleCipher.encode(encodeInput02)}`);
+const decodeInput02 = 'qayaeaagaciai';
+console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput02}') => ${simpleCipher.decode(decodeInput02)}`);
+const encodeInput03 = 'zzzzzzzzzz';
+console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput03}') => ${simpleCipher.encode(encodeInput03)}`);
+const decodeInput03 = 'zabcdefghi';
+console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput03}') => ${simpleCipher.decode(decodeInput03)}`);
+const encodeInput04 = 'lehungio';
+const simpleCipher2 = new SimpleCipher('abc');
+console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput04}') => ${simpleCipher2.encode(encodeInput04)}`);
+const decodeInput04 = 'lfjuoiip';
+console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput04}') => ${simpleCipher2.decode(decodeInput04)}`);
