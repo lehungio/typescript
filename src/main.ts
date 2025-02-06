@@ -233,3 +233,22 @@ const simpleCipher2 = new SimpleCipher('abc');
 console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput04}') => ${simpleCipher2.encode(encodeInput04)}`);
 const decodeInput04 = 'lfjuoiip';
 console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput04}') => ${simpleCipher2.decode(decodeInput04)}`);
+
+// Challege 23 - Wordy
+// The exercise provides a string that describes an arithmetic problem in plain English. 
+// Your task is to parse this string and compute the answer according to the operation described.
+import { answer } from './modules/challenges/wordy';
+const wordyInput = 'What is 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput}') => ${answer(wordyInput)}`);
+const wordyInput2 = 'What is 1 plus 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput2}') => ${answer(wordyInput2)}`);
+const wordyInput3 = 'What is 1 plus 5 minus -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput3}') => ${answer(wordyInput3)}`);
+const wordyInput4 = 'What is 20 minus 4 minus 13?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput4}') => ${answer(wordyInput4)}`);
+const wordyInput5 = 'What is 17 minus 6 plus 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput5}') => ${answer(wordyInput5)}`);
+const wordyInput6 = 'What is 2 multiplied by -2 multiplied by 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput6}') => ${answer(wordyInput6)}`);
+const wordyInput7 = 'What is -3 plus 7 multiplied by -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput7}') => ${answer(wordyInput7)}`);
