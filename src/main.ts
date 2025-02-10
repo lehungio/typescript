@@ -252,3 +252,23 @@ const wordyInput6 = 'What is 2 multiplied by -2 multiplied by 3?';
 console.log(`Challenge 23 - Wordy: answer('${wordyInput6}') => ${answer(wordyInput6)}`);
 const wordyInput7 = 'What is -3 plus 7 multiplied by -2?';
 console.log(`Challenge 23 - Wordy: answer('${wordyInput7}') => ${answer(wordyInput7)}`);
+
+// Challege 24 - List Lunacy (list-ops)
+// manipulate arrays (or lists) and perform various operations using TypeScript. Consider this a playground to test your skills in handling collections of data.
+// implement standard operations such as map, filter, reduce, and more to manipulate lists in TypeScript
+import { List } from './modules/challenges/list-ops';
+const list1 = List.create(1, 2);
+const list2 = List.create(3);
+const list3 = List.create<number>();
+const list4 = List.create(4, 5, 6);
+const listOfLists = List.create(list2, list3, list4);
+console.log(`Challenge 24 - List Ops: list1.append(list2) => ${list1.append(list2).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.concat(listOfLists) => ${list1.concat(listOfLists).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.filter((el) => el % 2 === 1).toString() => ${list1.filter((el) => el % 2 === 1).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.length() => ${list1.length()}`);
+console.log(`Challenge 24 - List Ops: list1.map((el) => ++el) => ${list1.map((el) => ++el)}`);
+console.log(`Challenge 24 - List Ops: list1.foldl((acc, el) => acc + el, 0) => ${list1.foldl((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.foldr((acc, el) => acc + el, 0) => ${list1.foldr((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.reverse() => ${list1.reverse()}`);
+list1.forEach((el) => console.log(`Challenge 24 - List Ops: list1.forEach((el) => console.log(el)) => ${el}`));
+
