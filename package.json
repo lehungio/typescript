@@ -1,6 +1,6 @@
 {
   "name": "@lehungio/typescript",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Typescript Challenges",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage --verbose",
-    "main": "node dist/main.js"
+    "main": "node dist/main.js",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
