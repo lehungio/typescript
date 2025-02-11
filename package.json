@@ -1,6 +1,6 @@
 {
   "name": "@lehungio/typescript",
-  "version": "1.1.1-rc.0",
+  "version": "1.1.1-rc.1",
   "description": "Typescript Challenges",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

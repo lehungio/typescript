@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  publish:
+  publish-github:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -34,11 +34,21 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISHER_GITHUB_TOKEN}}
-      - uses: actions/setup-node@v4 
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - run: npm ci
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.PUBLISHER_NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.PUBLISHER_NPM_TOKEN}}
       
