@@ -32,7 +32,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
-      - run: npm publish --access public
+      - run: npm run publish:package
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISHER_GITHUB_TOKEN}}
 
@@ -50,7 +50,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npm publish --access public
+      - run: npm run publish:package
         env:
           NPM_TOKEN: ${{secrets.PUBLISHER_NPM_TOKEN}}
       
