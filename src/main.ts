@@ -272,3 +272,24 @@ console.log(`Challenge 24 - List Ops: list1.foldr((acc, el) => acc + el, 0) => $
 console.log(`Challenge 24 - List Ops: list1.reverse() => ${list1.reverse()}`);
 list1.forEach((el) => console.log(`Challenge 24 - List Ops: list1.forEach((el) => console.log(el)) => ${el}`));
 
+// Challenge 25 - Word Count
+// Implement a function that counts the occurrences of words in a given phrase.
+import { count } from './modules/challenges/word-count';
+const wordCountInput = 'word';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput}') => ${JSON.stringify(count(wordCountInput))}`);
+const wordCountInput2 = 'one of each';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput2}') => ${JSON.stringify(count(wordCountInput2))}`);
+const wordCountInput3 = 'one fish two fish red fish blue fish';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput3}') => ${JSON.stringify(count(wordCountInput3))}`);
+const wordCountInput4 = 'one,two,three';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput4}') => ${JSON.stringify(count(wordCountInput4))}`);
+const wordCountInput5 = 'one,\ntwo,\nthree';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput5}') => ${JSON.stringify(count(wordCountInput5))}`);
+const wordCountInput6 = 'car: carpet as java: javascript!!&@$%^&"';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput6}') => ${JSON.stringify(count(wordCountInput6))}`);
+const wordCountInput7 = 'testing, 1, 2 testing';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput7}') => ${JSON.stringify(count(wordCountInput7))}`);
+const wordCountInput8 = 'go Go GO Stop stop';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput8}') => ${JSON.stringify(count(wordCountInput8))}`);
+const wordCountInput9 = "First: don't laugh. Then: don't cry.";
+console.log(`Challenge 25 - Word Count: count('${wordCountInput9}') => ${JSON.stringify(count(wordCountInput9))}`);
