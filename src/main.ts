@@ -233,3 +233,42 @@ const simpleCipher2 = new SimpleCipher('abc');
 console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput04}') => ${simpleCipher2.encode(encodeInput04)}`);
 const decodeInput04 = 'lfjuoiip';
 console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput04}') => ${simpleCipher2.decode(decodeInput04)}`);
+
+// Challege 23 - Wordy
+// The exercise provides a string that describes an arithmetic problem in plain English. 
+// Your task is to parse this string and compute the answer according to the operation described.
+import { answer } from './modules/challenges/wordy';
+const wordyInput = 'What is 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput}') => ${answer(wordyInput)}`);
+const wordyInput2 = 'What is 1 plus 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput2}') => ${answer(wordyInput2)}`);
+const wordyInput3 = 'What is 1 plus 5 minus -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput3}') => ${answer(wordyInput3)}`);
+const wordyInput4 = 'What is 20 minus 4 minus 13?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput4}') => ${answer(wordyInput4)}`);
+const wordyInput5 = 'What is 17 minus 6 plus 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput5}') => ${answer(wordyInput5)}`);
+const wordyInput6 = 'What is 2 multiplied by -2 multiplied by 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput6}') => ${answer(wordyInput6)}`);
+const wordyInput7 = 'What is -3 plus 7 multiplied by -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput7}') => ${answer(wordyInput7)}`);
+
+// Challege 24 - List Lunacy (list-ops)
+// manipulate arrays (or lists) and perform various operations using TypeScript. Consider this a playground to test your skills in handling collections of data.
+// implement standard operations such as map, filter, reduce, and more to manipulate lists in TypeScript
+import { List } from './modules/challenges/list-ops';
+const list1 = List.create(1, 2);
+const list2 = List.create(3);
+const list3 = List.create<number>();
+const list4 = List.create(4, 5, 6);
+const listOfLists = List.create(list2, list3, list4);
+console.log(`Challenge 24 - List Ops: list1.append(list2) => ${list1.append(list2).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.concat(listOfLists) => ${list1.concat(listOfLists).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.filter((el) => el % 2 === 1).toString() => ${list1.filter((el) => el % 2 === 1).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.length() => ${list1.length()}`);
+console.log(`Challenge 24 - List Ops: list1.map((el) => ++el) => ${list1.map((el) => ++el)}`);
+console.log(`Challenge 24 - List Ops: list1.foldl((acc, el) => acc + el, 0) => ${list1.foldl((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.foldr((acc, el) => acc + el, 0) => ${list1.foldr((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.reverse() => ${list1.reverse()}`);
+list1.forEach((el) => console.log(`Challenge 24 - List Ops: list1.forEach((el) => console.log(el)) => ${el}`));
+
