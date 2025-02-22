@@ -293,3 +293,11 @@ const wordCountInput8 = 'go Go GO Stop stop';
 console.log(`Challenge 25 - Word Count: count('${wordCountInput8}') => ${JSON.stringify(count(wordCountInput8))}`);
 const wordCountInput9 = "First: don't laugh. Then: don't cry.";
 console.log(`Challenge 25 - Word Count: count('${wordCountInput9}') => ${JSON.stringify(count(wordCountInput9))}`);
+
+// Challenge 26 - difference-of-squares
+// Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
+import { Squares } from './modules/challenges/difference-of-squares';
+const squares = new Squares(5);
+console.log(`Challenge 26 - Difference of Squares: squares.squareOfSum => ${squares.squareOfSum}`);
+console.log(`Challenge 26 - Difference of Squares: squares.sumOfSquares => ${squares.sumOfSquares}`);
+console.log(`Challenge 26 - Difference of Squares: squares.difference => ${squares.difference}`);
