@@ -321,3 +321,16 @@ console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(60*60*24) => ${
 import { reverse } from './modules/challenges/reverse-string';
 const reverseStringInput = 'hello';
 console.log(`Challenge 28 - Reverse String: reverse('${reverseStringInput}') => ${reverse(reverseStringInput)}`);
+
+// Challenge 29 - Triangle
+// Determine the type of triangle based on the lengths of its sides.
+import { Triangle } from './modules/challenges/triangle';
+console.log(`Challenge 29 - Triangle Check`);
+const triangle = new Triangle(3, 4, 5);
+console.log(`Challenge 29 - Triangle: triangle.isEquilateral => ${triangle.isEquilateral}`);
+console.log(`Challenge 29 - Triangle: triangle.isIsosceles => ${triangle.isIsosceles}`);
+console.log(`Challenge 29 - Triangle: triangle.isScalene => ${triangle.isScalene}`);
+const triangle2 = new Triangle(3, 3, 3);
+console.log(`Challenge 29 - Triangle: triangle2.isEquilateral => ${triangle2.isEquilateral}`);
+console.log(`Challenge 29 - Triangle: triangle2.isIsosceles => ${triangle2.isIsosceles}`);
+console.log(`Challenge 29 - Triangle: triangle2.isScalene => ${triangle2.isScalene}`);
