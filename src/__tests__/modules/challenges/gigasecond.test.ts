@@ -38,4 +38,24 @@ describe("Gigasecond", () => {
     gs.date();
     expect(gs.date()).toEqual(expectedDate);
   });
+
+  it("TODO Second from now", () => {
+    const gs = new Gigasecond(new Date(Date.parse("2015-01-24T23:59:59Z")));
+    // expect(gs.secondsFromNow()).toEqual(1000000000);
+  });
+
+  it("Second between dates", () => {
+    const gs = new Gigasecond(new Date(Date.parse("2015-01-24T23:59:59Z")));
+    const expectedDate = new Date(Date.parse("2046-10-03T01:46:39Z"));
+    expect(gs.secondsBetweenDates(expectedDate)).toEqual(1000000000);
+  });
+
+  it("TODO seconds to date with current date", () => {
+    const expectedDate = new Date(Date.parse("2046-10-03T01:46:39Z"));
+    // expect(Gigasecond.secondsToDate(expectedDate)).toEqual(1000000000);
+  });
+
+  it("Seconds to days with 1 Gigasecond to 11574 days", () => {
+    expect(Gigasecond.secondsToDays(1000000000)).toEqual(11574);
+  });
 });
