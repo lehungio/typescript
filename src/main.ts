@@ -301,3 +301,11 @@ const squares = new Squares(5);
 console.log(`Challenge 26 - Difference of Squares: squares.squareOfSum => ${squares.squareOfSum}`);
 console.log(`Challenge 26 - Difference of Squares: squares.sumOfSquares => ${squares.sumOfSquares}`);
 console.log(`Challenge 26 - Difference of Squares: squares.difference => ${squares.difference}`);
+
+// Challenge 27 - Gigasecond
+// Calculate the date that someone will celebrate their 1 Gs anniversary.
+import { Gigasecond } from './modules/challenges/gigasecond';
+const gigasecond = new Gigasecond(new Date('2011-04-25'));
+console.log(`Challenge 27 - Gigasecond: gigasecond.date() => ${gigasecond.date()}`);
+const gigasecondChallenge27 = new Gigasecond(new Date('2025-02-25'));
+console.log(`Challenge 27 - Gigasecond: gigasecondChallenge27.date() => ${gigasecondChallenge27.date()}`);
