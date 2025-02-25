@@ -19,13 +19,13 @@ export class Gigasecond {
   }
 
   secondsBetweenDates(targetDate: Date): number {
-    // Calculate difference in milliseconds and convert to seconds
+    // Calculate the difference in seconds between the target date and the current date
     return Math.floor((targetDate.getTime() - this.moment.getTime()) / 1000);
   }
 
   static secondsToDate(targetDate: Date): number {
     const now = new Date();
-    // Calculate difference in milliseconds and convert to seconds
+    // Calculate the difference in seconds between the target date and the current date
     return Math.floor((targetDate.getTime() - now.getTime()) / 1000);
   }
 

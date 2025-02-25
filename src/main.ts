@@ -315,3 +315,9 @@ console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDate(new Date('2044-
 console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(1000000000) => ${Gigasecond.secondsToDays(1000000000)}`);
 console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(60) => ${Gigasecond.secondsToDays(60)}`);
 console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(60*60*24) => ${Gigasecond.secondsToDays(60*60*24)}`);
+
+// Challenge 28 - Reverse String
+// Reverse a string using TypeScript.
+import { reverse } from './modules/challenges/reverse-string';
+const reverseStringInput = 'hello';
+console.log(`Challenge 28 - Reverse String: reverse('${reverseStringInput}') => ${reverse(reverseStringInput)}`);
