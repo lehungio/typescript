@@ -344,3 +344,12 @@ const collatzConjectureInput2 = 12;
 console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput2}) => ${steps(collatzConjectureInput2)}`); 
 const collatzConjectureInput3 = 1000000;
 console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput3}) => ${steps(collatzConjectureInput3)}`); 
+const collatzConjectureInput4 = 2025;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput4}) => ${steps(collatzConjectureInput4)}`); 
+
+// Challenge #42 - ETL
+// Extract, Transform, Load
+import { transform } from './modules/challenges/etl';
+const oldSystem = { 1: ['A'] };
+const newSystem = transform(oldSystem);
+console.log(`Challenge 42 - ETL: transform(${JSON.stringify(oldSystem)}) => ${JSON.stringify(newSystem)}`);
