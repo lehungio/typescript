@@ -30,7 +30,9 @@ jobs:
       run: npm run main
     - name: Run tests
       run: npm test
-    - name: Upload coverage reports to Codecov
+    - name: Upload coverage reports to Codecov # https://github.com/codecov/codecov-action
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        flags: modules-challenges
+        verbose: true # optional (default = false)

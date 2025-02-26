@@ -59,3 +59,65 @@ describe("Gigasecond", () => {
     expect(Gigasecond.secondsToDays(1000000000)).toEqual(11574);
   });
 });
+
+describe('Gigasecond Seconds From Now', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+  it('should correctly calculate seconds from now', () => {
+    const startDate = new Date();
+    const gigasecond = new Gigasecond(startDate);
+
+    // Simulate a small delay to ensure the test is realistic
+    setTimeout(() => {
+      const secondsFromNow = gigasecond.secondsFromNow();
+      const expectedSeconds = Math.floor((gigasecond['futureDate'].getTime() - new Date().getTime()) / 1000);
+
+      // Allow a small margin of error due to execution time
+      expect(secondsFromNow).toBeCloseTo(expectedSeconds, -1);
+    }, 1000);
+  });
+
+  test('secondsFromNow should return the correct number of seconds', () => {
+    const startDate = new Date();
+    const gigasecond = new Gigasecond(startDate);
+    
+    // Fast forward time by 1 second to ensure the test is not flaky
+    jest.advanceTimersByTime(1000);
+
+    const secondsFromNow = gigasecond.secondsFromNow();
+    const expectedSeconds = Math.floor((gigasecond.date().getTime() - new Date().getTime()) / 1000);
+
+    expect(secondsFromNow).toBe(expectedSeconds);
+  });
+});
+
+describe('Gigasecond Seconds To Date', () => {
+  describe('secondsToDate', () => {
+    it('should return the correct number of seconds between now and the target date', () => {
+      const now = new Date();
+      const futureDate = new Date(now.getTime() + 5000); // 5 seconds in the future
+
+      const seconds = Gigasecond.secondsToDate(futureDate);
+
+      expect(seconds).toBeCloseTo(5, 0); // Allowing for slight timing differences
+    });
+
+    it('should return a negative number if the target date is in the past', () => {
+      const now = new Date();
+      const pastDate = new Date(now.getTime() - 5000); // 5 seconds in the past
+
+      const seconds = Gigasecond.secondsToDate(pastDate);
+
+      expect(seconds).toBeCloseTo(-5, 0); // Allowing for slight timing differences
+    });
+
+    it('should return zero if the target date is now', () => {
+      const now = new Date();
+
+      const seconds = Gigasecond.secondsToDate(now);
+
+      expect(seconds).toBe(0);
+    });
+  });
+});

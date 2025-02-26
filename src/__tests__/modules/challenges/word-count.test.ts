@@ -1,5 +1,5 @@
 import { describe, it, expect, xit } from '@jest/globals'
-import { count } from '../../../modules/challenges/word-count'
+import { count, wordCount } from '../../../modules/challenges/word-count'
 
 describe('count()', () => {
   it('counts one word', () => {
@@ -126,3 +126,41 @@ describe('count()', () => {
     )
   })
 })
+
+describe('wordCount', () => {
+  test('counts words in a simple sentence', () => {
+    const text = 'Hello world';
+    const expected = new Map([['hello', 1], ['world', 1]]);
+    expect(wordCount(text)).toEqual(expected);
+  });
+
+  test('counts words with different cases as the same word', () => {
+    const text = 'Hello hello HELLO';
+    const expected = new Map([['hello', 3]]);
+    expect(wordCount(text)).toEqual(expected);
+  });
+
+  test('counts words with apostrophes correctly', () => {
+    const text = "It's a test. It's only a test.";
+    const expected = new Map([['it\'s', 2], ['a', 2], ['test', 2], ['only', 1]]);
+    expect(wordCount(text)).toEqual(expected);
+  });
+
+  test('returns an empty map for an empty string', () => {
+    const text = '';
+    const expected = new Map();
+    expect(wordCount(text)).toEqual(expected);
+  });
+
+  test('ignores punctuation', () => {
+    const text = 'Hello, world! This is a test.';
+    const expected = new Map([['hello', 1], ['world', 1], ['this', 1], ['is', 1], ['a', 1], ['test', 1]]);
+    expect(wordCount(text)).toEqual(expected);
+  });
+
+  test('handles multiple spaces between words', () => {
+    const text = 'Hello    world';
+    const expected = new Map([['hello', 1], ['world', 1]]);
+    expect(wordCount(text)).toEqual(expected);
+  });
+});
