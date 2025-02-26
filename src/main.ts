@@ -334,3 +334,13 @@ const triangle2 = new Triangle(3, 3, 3);
 console.log(`Challenge 29 - Triangle: triangle2.isEquilateral => ${triangle2.isEquilateral}`);
 console.log(`Challenge 29 - Triangle: triangle2.isIsosceles => ${triangle2.isIsosceles}`);
 console.log(`Challenge 29 - Triangle: triangle2.isScalene => ${triangle2.isScalene}`);
+
+// Challenge 30 - Collatz Conjecture
+// The Collatz Conjecture is a sequence of numbers that starts with a positive integer and applies a set of rules to determine the next number in the sequence.
+import { steps } from './modules/challenges/collatz-conjecture';
+const collatzConjectureInput = 16;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput}) => ${steps(collatzConjectureInput)}`); 
+const collatzConjectureInput2 = 12;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput2}) => ${steps(collatzConjectureInput2)}`); 
+const collatzConjectureInput3 = 1000000;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput3}) => ${steps(collatzConjectureInput3)}`); 
