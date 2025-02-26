@@ -233,3 +233,137 @@ const simpleCipher2 = new SimpleCipher('abc');
 console.log(`Challenge 22 - Simple Cipher: encode('${encodeInput04}') => ${simpleCipher2.encode(encodeInput04)}`);
 const decodeInput04 = 'lfjuoiip';
 console.log(`Challenge 22 - Simple Cipher: decode('${decodeInput04}') => ${simpleCipher2.decode(decodeInput04)}`);
+
+// Challege 23 - Wordy
+// The exercise provides a string that describes an arithmetic problem in plain English. 
+// Your task is to parse this string and compute the answer according to the operation described.
+import { answer } from './modules/challenges/wordy';
+const wordyInput = 'What is 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput}') => ${answer(wordyInput)}`);
+const wordyInput2 = 'What is 1 plus 1 plus 1?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput2}') => ${answer(wordyInput2)}`);
+const wordyInput3 = 'What is 1 plus 5 minus -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput3}') => ${answer(wordyInput3)}`);
+const wordyInput4 = 'What is 20 minus 4 minus 13?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput4}') => ${answer(wordyInput4)}`);
+const wordyInput5 = 'What is 17 minus 6 plus 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput5}') => ${answer(wordyInput5)}`);
+const wordyInput6 = 'What is 2 multiplied by -2 multiplied by 3?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput6}') => ${answer(wordyInput6)}`);
+const wordyInput7 = 'What is -3 plus 7 multiplied by -2?';
+console.log(`Challenge 23 - Wordy: answer('${wordyInput7}') => ${answer(wordyInput7)}`);
+
+// Challege 24 - List Lunacy (list-ops)
+// manipulate arrays (or lists) and perform various operations using TypeScript. Consider this a playground to test your skills in handling collections of data.
+// implement standard operations such as map, filter, reduce, and more to manipulate lists in TypeScript
+import { List } from './modules/challenges/list-ops';
+const list1 = List.create(1, 2);
+const list2 = List.create(3);
+const list3 = List.create<number>();
+const list4 = List.create(4, 5, 6);
+const listOfLists = List.create(list2, list3, list4);
+console.log(`Challenge 24 - List Ops: list1.append(list2) => ${list1.append(list2).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.concat(listOfLists) => ${list1.concat(listOfLists).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.filter((el) => el % 2 === 1).toString() => ${list1.filter((el) => el % 2 === 1).toString()}`);
+console.log(`Challenge 24 - List Ops: list1.length() => ${list1.length()}`);
+console.log(`Challenge 24 - List Ops: list1.map((el) => ++el) => ${list1.map((el) => ++el)}`);
+console.log(`Challenge 24 - List Ops: list1.foldl((acc, el) => acc + el, 0) => ${list1.foldl((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.foldr((acc, el) => acc + el, 0) => ${list1.foldr((acc, el) => acc + el, 0)}`);
+console.log(`Challenge 24 - List Ops: list1.reverse() => ${list1.reverse()}`);
+list1.forEach((el) => console.log(`Challenge 24 - List Ops: list1.forEach((el) => console.log(el)) => ${el}`));
+
+// Challenge 25 - Word Count
+// Implement a function that counts the occurrences of words in a given phrase.
+import { count } from './modules/challenges/word-count';
+const wordCountInput = 'word';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput}') => ${JSON.stringify(count(wordCountInput))}`);
+const wordCountInput2 = 'one of each';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput2}') => ${JSON.stringify(count(wordCountInput2))}`);
+const wordCountInput3 = 'one fish two fish red fish blue fish';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput3}') => ${JSON.stringify(count(wordCountInput3))}`);
+const wordCountInput4 = 'one,two,three';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput4}') => ${JSON.stringify(count(wordCountInput4))}`);
+const wordCountInput5 = 'one,\ntwo,\nthree';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput5}') => ${JSON.stringify(count(wordCountInput5))}`);
+const wordCountInput6 = 'car: carpet as java: javascript!!&@$%^&"';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput6}') => ${JSON.stringify(count(wordCountInput6))}`);
+const wordCountInput7 = 'testing, 1, 2 testing';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput7}') => ${JSON.stringify(count(wordCountInput7))}`);
+const wordCountInput8 = 'go Go GO Stop stop';
+console.log(`Challenge 25 - Word Count: count('${wordCountInput8}') => ${JSON.stringify(count(wordCountInput8))}`);
+const wordCountInput9 = "First: don't laugh. Then: don't cry.";
+console.log(`Challenge 25 - Word Count: count('${wordCountInput9}') => ${JSON.stringify(count(wordCountInput9))}`);
+
+// Challenge 26 - difference-of-squares
+// Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
+import { Squares } from './modules/challenges/difference-of-squares';
+const squares = new Squares(5);
+console.log(`Challenge 26 - Difference of Squares: squares.squareOfSum => ${squares.squareOfSum}`);
+console.log(`Challenge 26 - Difference of Squares: squares.sumOfSquares => ${squares.sumOfSquares}`);
+console.log(`Challenge 26 - Difference of Squares: squares.difference => ${squares.difference}`);
+
+// Challenge 27 - Gigasecond
+// Calculate the date that someone will celebrate their 1 Gs anniversary.
+import { Gigasecond } from './modules/challenges/gigasecond';
+const gigasecond = new Gigasecond(new Date('2011-04-25'));
+console.log(`Challenge 27 - Gigasecond: gigasecond.date() => ${gigasecond.date()}`);
+const gigasecondChallenge27 = new Gigasecond(new Date('2025-02-25'));
+console.log(`Challenge 27 - Gigasecond: gigasecondChallenge27.date() => ${gigasecondChallenge27.date()}`);
+console.log(`Challenge 27 - Gigasecond: gigasecondChallenge27.secondsFromNow() => ${gigasecondChallenge27.secondsFromNow()}`);
+console.log(`Challenge 27 - Gigasecond: gigasecondChallenge27.secondsBetweenDates(new Date('2044-10-05T01:46:40Z')) => ${gigasecondChallenge27.secondsBetweenDates(new Date('2044-10-05T01:46:40Z'))}`);
+console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDate(new Date('2044-10-05T01:46:40Z')) => ${Gigasecond.secondsToDate(new Date('2044-10-05T01:46:40Z'))}`);
+console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(1000000000) => ${Gigasecond.secondsToDays(1000000000)}`);
+console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(60) => ${Gigasecond.secondsToDays(60)}`);
+console.log(`Challenge 27 - Gigasecond: Gigasecond.secondsToDays(60*60*24) => ${Gigasecond.secondsToDays(60*60*24)}`);
+
+// Challenge 28 - Reverse String
+// Reverse a string using TypeScript.
+import { reverse } from './modules/challenges/reverse-string';
+const reverseStringInput = 'hello';
+console.log(`Challenge 28 - Reverse String: reverse('${reverseStringInput}') => ${reverse(reverseStringInput)}`);
+
+// Challenge 29 - Triangle
+// Determine the type of triangle based on the lengths of its sides.
+import { Triangle } from './modules/challenges/triangle';
+console.log(`Challenge 29 - Triangle Check`);
+const triangle = new Triangle(3, 4, 5);
+console.log(`Challenge 29 - Triangle: triangle.isEquilateral => ${triangle.isEquilateral}`);
+console.log(`Challenge 29 - Triangle: triangle.isIsosceles => ${triangle.isIsosceles}`);
+console.log(`Challenge 29 - Triangle: triangle.isScalene => ${triangle.isScalene}`);
+const triangle2 = new Triangle(3, 3, 3);
+console.log(`Challenge 29 - Triangle: triangle2.isEquilateral => ${triangle2.isEquilateral}`);
+console.log(`Challenge 29 - Triangle: triangle2.isIsosceles => ${triangle2.isIsosceles}`);
+console.log(`Challenge 29 - Triangle: triangle2.isScalene => ${triangle2.isScalene}`);
+
+// Challenge 30 - Collatz Conjecture
+// The Collatz Conjecture is a sequence of numbers that starts with a positive integer and applies a set of rules to determine the next number in the sequence.
+import { steps } from './modules/challenges/collatz-conjecture';
+const collatzConjectureInput = 16;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput}) => ${steps(collatzConjectureInput)}`); 
+const collatzConjectureInput2 = 12;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput2}) => ${steps(collatzConjectureInput2)}`); 
+const collatzConjectureInput3 = 1000000;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput3}) => ${steps(collatzConjectureInput3)}`); 
+const collatzConjectureInput4 = 2025;
+console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput4}) => ${steps(collatzConjectureInput4)}`); 
+
+// Challenge #42 - ETL
+// Extract, Transform, Load
+console.log(`Challenge #42 - ETL`);
+import { transform } from './modules/challenges/etl';
+const oldSystem = { 1: ['A'] };
+const newSystem = transform(oldSystem);
+console.log(`Challenge #42 - ETL: transform(${JSON.stringify(oldSystem)}) => ${JSON.stringify(newSystem)}`);
+
+// Challenge #43 - Protein Translation
+// Translate RNA sequences into proteins.
+console.log(`Challenge #43 - Protein Translation`);
+import { translateRNA } from './modules/challenges/protein-translation';
+const rnaInput = 'AUGUUUUGG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput}') => ${JSON.stringify(translateRNA(rnaInput))}`);
+const rnaInput2 = 'AUGUUUUAA';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput2}') => ${JSON.stringify(translateRNA(rnaInput2))}`);
+const rnaInput3 = 'AUGUUUUAG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput3}') => ${JSON.stringify(translateRNA(rnaInput3))}`);
+const rnaInput4 = 'AUGUUUUAGUGG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput4}') => ${JSON.stringify(translateRNA(rnaInput4))}`);
