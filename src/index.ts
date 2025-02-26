@@ -8,3 +8,4 @@ export { reverse } from './modules/challenges/reverse-string';
 export { Triangle } from './modules/challenges/triangle';
 export { steps } from './modules/challenges/collatz-conjecture';
 export { transform } from './modules/challenges/etl';
+export { translateRNA } from './modules/challenges/protein-translation';
