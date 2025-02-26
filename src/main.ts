@@ -349,7 +349,21 @@ console.log(`Challenge 30 - Collatz Conjecture: steps(${collatzConjectureInput4}
 
 // Challenge #42 - ETL
 // Extract, Transform, Load
+console.log(`Challenge #42 - ETL`);
 import { transform } from './modules/challenges/etl';
 const oldSystem = { 1: ['A'] };
 const newSystem = transform(oldSystem);
-console.log(`Challenge 42 - ETL: transform(${JSON.stringify(oldSystem)}) => ${JSON.stringify(newSystem)}`);
+console.log(`Challenge #42 - ETL: transform(${JSON.stringify(oldSystem)}) => ${JSON.stringify(newSystem)}`);
+
+// Challenge #43 - Protein Translation
+// Translate RNA sequences into proteins.
+console.log(`Challenge #43 - Protein Translation`);
+import { translateRNA } from './modules/challenges/protein-translation';
+const rnaInput = 'AUGUUUUGG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput}') => ${JSON.stringify(translateRNA(rnaInput))}`);
+const rnaInput2 = 'AUGUUUUAA';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput2}') => ${JSON.stringify(translateRNA(rnaInput2))}`);
+const rnaInput3 = 'AUGUUUUAG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput3}') => ${JSON.stringify(translateRNA(rnaInput3))}`);
+const rnaInput4 = 'AUGUUUUAGUGG';
+console.log(`Challenge #43 - Protein Translation: translateRNA('${rnaInput4}') => ${JSON.stringify(translateRNA(rnaInput4))}`);
